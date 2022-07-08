@@ -1,69 +1,124 @@
-html{
-    font-size: 62.5%;
-}
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-}
-body{
-    background: #000;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.contenedor__img{
-    margin: 0% 10% 20% 10%;
-    padding: 20px;
-}
-.primera__foto{
-    width: 100%;
-}
+html {
+  font-size: 62.5%; }
 
-.barraNavegacion{
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff; }
+
+body {
+  background: black; }
+
+#headerPosition {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1; }
+  @media screen and (min-width: 950px) {
+    #headerPosition .brand .logo {
+      width: 230px; } }
+  #headerPosition .barraNavegacion {
     width: 40%;
-}
-ul{
-    list-style: none;
-}
-li{
-    padding: 5px;
-}
-ul li a{
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    margin-right: 20px;
-}
-.btn__navflex{
-    justify-content: flex-end !important;
-}
-h1{
+    z-index: 1000;
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem; }
+    #headerPosition .barraNavegacion .btn__navflex {
+      justify-content: flex-end !important;
+      z-index: 100; }
+    #headerPosition .barraNavegacion .enlacesBarra {
+      margin-top: 15px;
+      background: rgba(0, 0, 0, 0.942);
+      border-radius: 5px; }
+      #headerPosition .barraNavegacion .enlacesBarra ul {
+        list-style: none; }
+        #headerPosition .barraNavegacion .enlacesBarra ul li {
+          padding: 5px; }
+          #headerPosition .barraNavegacion .enlacesBarra ul li a {
+            color: #d7d7d7;
+            font-family: "Raleway", sans-serif;
+            font-size: 2rem; }
+
+.contenedor__img {
+  margin: 0% 10%;
+  padding: 20px; }
+  @media screen and (min-width: 950px) {
+    .contenedor__img {
+      display: flex;
+      justify-content: center; } }
+  .contenedor__img .primera__foto {
+    width: 100%; }
+    @media screen and (min-width: 950px) {
+      .contenedor__img .primera__foto {
+        width: 70%; } }
+
+h2 {
+  padding: 2rem;
+  font-family: "Splash", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px #fff; }
+
+p {
+  padding: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  text-align: center; }
+
+#nosotros .parrNotDisplay {
+  display: none; }
+  @media screen and (min-width: 950px) {
+    #nosotros .parrNotDisplay {
+      display: inline-block; } }
+
+#fechas {
+  padding: 20px; }
+  #fechas h4 {
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px; }
+  #fechas .datos p {
+    font-size: 1.6rem;
+    padding: 5px; }
+  #fechas .iframeMap {
     display: flex;
     justify-content: center;
-    width: 100%;
-    color: #fff;
-    font-size: 13.5rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px aqua;
-}
+    padding-top: 15px; }
 
 .galeria__posicion {
-    margin-bottom: 20px;
-    overflow: hidden; }
-    .galeria__posicion .carousel__fotos {
-      transition: transform 0.8s cubic-bezier(0, 0.98, 1, 1); }
-      .galeria__posicion .carousel__fotos .galeriaFotos {
-        margin: 0 auto;
-        filter: drop-shadow(2px 2px #000); }
-        @media only screen and (max-width: 950px) {
-          .galeria__posicion .carousel__fotos .galeriaFotos {
-            max-height: 145px; } }
-        @media only screen and (max-width: 480px) {
-          .galeria__posicion .carousel__fotos .galeriaFotos {
-            flex-direction: column;
-            padding: 10px;
-            max-height: 115px; } }
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .galeria__posicion .carousel__fotos {
+    transition: transform 0.8s cubic-bezier(0, 0.98, 1, 1); }
+    .galeria__posicion .carousel__fotos .galeriaFotos {
+      margin: 0 auto;
+      filter: drop-shadow(2px 2px #000);
+      flex-direction: column;
+      padding: 10px;
+      max-height: 250px; }
+      @media screen and (min-width: 950px) {
+        .galeria__posicion .carousel__fotos .galeriaFotos {
+          max-height: 200vh; } }
+
+footer .fraseFooter {
+  font-size: 1.6rem;
+  font-family: "Splash", cursive; }
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: space-around; }
+
+.arribaLink {
+  list-style: none;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-end; }
+  .arribaLink .fa-arrow-up {
+    color: #fff;
+    list-style: none;
+    font-size: 1.5rem; }
